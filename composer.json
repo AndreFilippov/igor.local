@@ -1,0 +1,17 @@
+{
+    "name": "andrey/igor.local",
+    "authors": [
+        {
+            "name": "AndreFilippov",
+            "email": "59467504+AndreFilippov@users.noreply.github.com"
+        }
+    ],
+    "require": {
+      "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    }
+}

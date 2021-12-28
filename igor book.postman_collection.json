@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "62fae756-64e7-4acd-9067-c6cd8c55e288",
+		"name": "igor book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Авторизация",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"igor\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Мои книги",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/my-books",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"my-books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Все книги",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/books",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Книги пользователя",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/user/books/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Взять книгу",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/books/take/0001",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"books",
+						"take",
+						"0001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Вернуть книгу",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/books/return/0001",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"books",
+						"return",
+						"0001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Посмотреть книгу",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/books/0001",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"books",
+						"0001"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http:\\\\localhost"
+		}
+	]
+}
